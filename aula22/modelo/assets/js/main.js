@@ -6,6 +6,8 @@ formulario.addEventListener('submit', function (e) {
     const altura = Number(document.querySelector('#altura').value);
     const IMC = peso / (altura ** 2);
 
+    console.log(`${peso} ${altura} ${IMC}`)
+
     let res = document.querySelector('.res');
     res.innerHTML = ``;
 
