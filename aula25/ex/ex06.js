@@ -8,6 +8,8 @@ let minutos = data.getMinutes();
 
 let text = document.querySelector('h1');
 
+
+
 /*let container = document.getElementsByClassName('.container');
 container.innerHTML = `${dia},` */
 
@@ -71,7 +73,7 @@ switch (mês){
         break;
     case 11:
         mês = 'Dezembro';
-        break;
+        break
 }
 if (hora >= 6 && hora < 12){
     document.body.style.backgroundImage = "linear-gradient(to bottom, #042959, #10386b, #1b487e, #245992, #2e6aa5, #3b79b2, #4888bf, #5697cc, #6aa6d5, #7eb6df, #92c5e8, #a7d5f2)";
@@ -81,6 +83,9 @@ if (hora >= 6 && hora < 12){
     document.body.style.backgroundImage = "linear-gradient(to bottom, #000120, #0b1234, #191a49, #2b225d, #3f2972, #51307d, #623887, #744091, #824d95, #8f5a99, #9b689e, #a676a3)";
 } else{
     document.body.style.backgroundColor = '#000120'
+}
+if (minutos < 10){
+    minutos = `0${minutos}`;
 }
 console.log(`${diaDaSemana}, ${dia} de ${mês} de ${ano}, ${hora}:${minutos} `);
 
