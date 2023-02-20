@@ -1,4 +1,5 @@
 let data = new Date();
+let text = document.querySelector('h1');
 let diaDaSemana = data.getDay();
 let dia = data.getDate()
 let mês = data.getMonth();
@@ -6,12 +7,6 @@ let ano = data.getFullYear();
 let hora = data.getHours();
 let minutos = data.getMinutes();
 
-let text = document.querySelector('h1');
-
-
-
-/*let container = document.getElementsByClassName('.container');
-container.innerHTML = `${dia},` */
 
 switch (diaDaSemana){
     case 0:
@@ -87,6 +82,9 @@ if (hora >= 6 && hora < 12){
 if (minutos < 10){
     minutos = `0${minutos}`;
 }
+if (hora < 10){
+    hora = `0${hora}`;
+}
 console.log(`${diaDaSemana}, ${dia} de ${mês} de ${ano}, ${hora}:${minutos} `);
 
-text.innerHTML = `${diaDaSemana}, ${dia} de ${mês} de ${ano}, ${hora}:${minutos} `
+text.innerHTML = `${diaDaSemana}, ${dia} de ${mês} de ${ano}, ${hora}:${minutos} ` 
