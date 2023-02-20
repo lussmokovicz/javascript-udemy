@@ -73,7 +73,15 @@ switch (mês){
         mês = 'Dezembro';
         break;
 }
-
+if (hora >= 6 && hora < 12){
+    document.body.style.backgroundImage = "linear-gradient(to bottom, #042959, #10386b, #1b487e, #245992, #2e6aa5, #3b79b2, #4888bf, #5697cc, #6aa6d5, #7eb6df, #92c5e8, #a7d5f2)";
+} else if (hora <= 18){
+    document.body.style.backgroundImage = "linear-gradient(to top, #3a400c, #484c10, #565913, #656617, #75731b, #807e21, #8b8828, #96932e, #9d9e38, #a5a942, #acb44c, #b3bf56)";
+} else if (hora > 18){
+    document.body.style.backgroundImage = "linear-gradient(to bottom, #000120, #0b1234, #191a49, #2b225d, #3f2972, #51307d, #623887, #744091, #824d95, #8f5a99, #9b689e, #a676a3)";
+} else{
+    document.body.style.backgroundColor = '#000120'
+}
 console.log(`${diaDaSemana}, ${dia} de ${mês} de ${ano}, ${hora}:${minutos} `);
 
 text.innerHTML = `${diaDaSemana}, ${dia} de ${mês} de ${ano}, ${hora}:${minutos} `
