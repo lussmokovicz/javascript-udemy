@@ -19,3 +19,12 @@ const pessoa = {
 for (let index in pessoa){
     console.log(index);
 }
+//Forma de acesso da chave:
+console.log(pessoa.nome);
+console.log(pessoa['nome']);
+const chaveI = 'idade';
+console.log(pessoa[chaveI]);
+
+for ( let chave in pessoa){
+    console.log(chave,':',pessoa[chave]);
+}
